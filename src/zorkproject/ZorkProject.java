@@ -19,7 +19,7 @@ public class ZorkProject extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("UI/UI.fxml"));
         
         Scene scene = new Scene(root);
         

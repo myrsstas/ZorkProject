@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zorkproject.UIController">
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zorkproject.Controllers.UIController">
    <children>
       <GridPane layoutX="-1.0" layoutY="2.0" prefHeight="600.0" prefWidth="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -18,7 +20,7 @@
           <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField id="outputTextField" prefHeight="10.0" prefWidth="593.0" GridPane.rowIndex="1">
+            <TextField id="outputTextField" prefHeight="36.0" prefWidth="336.0" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="10.0" top="10.0" />
                </GridPane.margin>
