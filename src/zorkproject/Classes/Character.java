@@ -5,8 +5,17 @@ public class Character
 {
     String name;
     int score;
-    int helth;
+    int health;
     int position;
+    
+    Character () 
+    {
+        name = Player1;
+        score = 0;
+        health = 100;
+        position = 0;
+    }
+    
     
     Character(String N)
     {
@@ -17,7 +26,7 @@ public class Character
     Character(int s , int h , int p)
     {
         score = s;
-        helth = h;
+        health = h;
         position = p;
         
     }
@@ -36,7 +45,7 @@ public class Character
      
      void PrintHelthCaracter()
      {
-      System.out.print(helth);
+      System.out.print(health);
      }
      
      void PrintPositionCharacter()
@@ -68,12 +77,12 @@ public class Character
      
      public void setHelthCharacter(int helth)
      {
-       this.helth = helth;    
+       this.health = health;    
      }
      
-     public int getHelthCharacter()
+     public int getHealthCharacter()
      {
-         return (helth);
+         return (health);
          
      }
      
