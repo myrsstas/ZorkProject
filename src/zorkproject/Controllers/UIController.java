@@ -45,4 +45,5 @@ public class UIController implements Initializable {
     public void handleButtonClick(ActionEvent actionEvent) {
         inputTextBox.setText("sdgfsdfdfgdfgdfg");
     }
+
 }
