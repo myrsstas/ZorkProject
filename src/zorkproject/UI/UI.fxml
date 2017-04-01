@@ -20,7 +20,7 @@
           <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField id="outputTextField" prefHeight="36.0" prefWidth="336.0" GridPane.rowIndex="1">
+            <TextField id="outputTextField" prefHeight="37.0" prefWidth="509.0" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="10.0" top="10.0" />
                </GridPane.margin>
