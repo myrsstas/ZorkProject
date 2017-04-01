@@ -4,7 +4,7 @@ public class Player {
     String name;
     int movie;
     int score;
-    int helth;
+    int health;
     int position;
     
     Player(String N)
@@ -16,7 +16,7 @@ public class Player {
     {
       movie = m;
       score = s;
-      helth = h;
+      health = h;
       position = p;
       
     }
@@ -35,9 +35,9 @@ public class Player {
       System.out.print(score);
      }
      
-     void PrintHelthPlayer()
+     void PrintHealthPlayer()
      {
-      System.out.print(helth);
+      System.out.print(health);
      }
      
      void PrintPositionPlayer()
@@ -75,14 +75,14 @@ public class Player {
        return (score);  
      }
      
-     public void setHelthPlayer(int helth)
+     public void setHealthPlayer(int health)
      {
-       this.helth = helth;    
+       this.health = health;    
      }
      
-     public int getHelthPlayer()
+     public int getHealthPlayer()
      {
-         return (helth);
+         return (health);
          
      }
      
