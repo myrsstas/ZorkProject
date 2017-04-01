@@ -10,7 +10,7 @@ public class Character
     
     Character () 
     {
-        name = Player1;
+        name = "Player1";
         score = 0;
         health = 100;
         position = 0;

@@ -2,7 +2,7 @@ package zorkproject.Classes;
 
 public class Player {
     String name;
-    int movie;
+    int moves;
     int score;
     int health;
     int position;
@@ -14,7 +14,7 @@ public class Player {
     
     Player(int m , int s , int h, int p )
     {
-      movie = m;
+      moves = m;
       score = s;
       health = h;
       position = p;
@@ -25,9 +25,9 @@ public class Player {
       System.out.print(name);
      }
      
-     void PrintMoviePlayer()
+     void PrintMovesPlayer()
      {
-      System.out.print(movie);
+      System.out.print(moves);
      }
      
      void PrintScorePlayer()
@@ -56,14 +56,14 @@ public class Player {
        
      }
      
-     public void setMoviePlayer(int movie)
+     public void setMovesPlayer(int moves)
      {
-          this.movie = movie;
+          this.moves = moves;
      }
      
-     public int getMoiePlayer()
+     public int getMovesPlayer()
      {
-       return (movie);  
+       return (moves);  
      }
      
      public void setScorePlayer(int score)
