@@ -3,14 +3,14 @@ package zorkproject.Classes;
 
 public class Character 
 {
-    String name;
-    int score;
-    int health;
-    int position;
+    private String name;
+    private int score;
+    private int health;
+    private int position;
     
     Character () 
     {
-        name = Player1;
+        name = "Player1";
         score = 0;
         health = 100;
         position = 0;
@@ -75,7 +75,7 @@ public class Character
        return (score);  
      }
      
-     public void setHelthCharacter(int helth)
+     public void setHelthCharacter(int health)
      {
        this.health = health;    
      }
