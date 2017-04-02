@@ -1,4 +1,5 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
+
 /*
 * Κλαση Character: Χρησημοποιητε για να δημιουγουνται χαρακτηρες τυπου φαντασμα, μαγος
 * Η λογικη ειναι να μπορουμε να προσθετουμε , να αφαιρουμε η να επεξεργαζοματσε αντικειμενα χαρακτηρων οπου θα μπορουμε
@@ -13,6 +14,7 @@ public class Character
     private int score;
     private int health;
     private int position;
+
     
     Character () 
     {

@@ -1,4 +1,4 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
 
 import java.util.Date;
 

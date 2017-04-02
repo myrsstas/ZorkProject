@@ -1,4 +1,4 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
 
 /**
  * Κλαση ridle (γριφος) ειναι μια κλαση οπου θα μπορουμε να διαχειριστουμε τους διαφορους γρυφους προς επιλυση. Περα
@@ -10,7 +10,7 @@ package zorkproject.Classes;
 public class Ridle {
     private String ridleQuestion;
     private String ridleAnswer;
-    Ridle() {
+    private Ridle() {
         ridleQuestion = "";
         ridleAnswer = "";
     }

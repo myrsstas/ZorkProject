@@ -1,4 +1,4 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
 
 public class Player {
     private String name = "Player1"; // TODO Ππεπει να κανουμε την αριθμηση του παιχτη σωστα με εναν μετρητη
@@ -6,6 +6,7 @@ public class Player {
     private int score;
     private int health;
     private int position;
+    private Inventory inventory;
 
     Player (){
         moves = 0;

@@ -3,31 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package zorkproject.Controllers;
+package zorkproject.Classes.Game.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.sun.deploy.uitoolkit.impl.fx.ui.FXMessageDialog;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import zorkproject.Classes.Character;
-import zorkproject.Classes.Message;
-import zorkproject.Classes.Time;
 
 import javax.swing.*;
 
-/**
- *
- * @author paulkokos
- */
+
 public class UIController extends ActionEvent implements Initializable {
     public Button button;
     public TextArea inputTextBox;

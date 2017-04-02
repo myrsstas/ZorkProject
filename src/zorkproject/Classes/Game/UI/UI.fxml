@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zorkproject.Controllers.UIController">
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zorkproject.Classes.Game.Controller.UIController">
    <children>
       <Button fx:id="button" layoutX="477.0" layoutY="638.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="45.0" prefWidth="151.0" text="ENTER" />
       <TextArea id="inputTextBox" fx:id="inputTextBox" editable="false" focusTraversable="false" layoutX="14.0" layoutY="14.0" onKeyTyped="#enterPressed" prefHeight="608.0" prefWidth="615.0">

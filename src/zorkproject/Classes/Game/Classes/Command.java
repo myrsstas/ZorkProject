@@ -1,4 +1,4 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
 
 /**
  * Η κλαση Command ειναι διαχειρηζεται τισ εντολες ως αντικειμενα με μελλοντικο σκοπο αν τα αποθηκευει σε ενα αρχειο

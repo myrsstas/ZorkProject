@@ -1,10 +1,10 @@
-package zorkproject.Classes;
+package zorkproject.Classes.Game.Classes;
 
 public class Item 
 {
-  String name;
-  int code;
-  int position;
+  private String name;
+  private int code;
+  private int position;
 
   Item (String N)
   {

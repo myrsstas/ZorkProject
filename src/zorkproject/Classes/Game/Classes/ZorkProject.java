@@ -3,20 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package zorkproject;
+package zorkproject.Classes.Game.Classes;
 
 import javafx.application.Application;
-import javafx.event.*;
-import javafx.event.Event;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import zorkproject.Classes.Message;
-import zorkproject.Classes.Time;
-
-import java.awt.*;
 
 /**
  *
