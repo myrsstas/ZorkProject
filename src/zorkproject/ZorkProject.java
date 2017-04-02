@@ -6,11 +6,14 @@
 package zorkproject;
 
 import javafx.application.Application;
+import javafx.event.*;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import zorkproject.Classes.Message;
 import zorkproject.Classes.Time;
 
 import java.awt.*;
@@ -25,8 +28,10 @@ public class ZorkProject extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("UI/UI.fxml"));
-        Time time = new Time();
-        time.getAgeInSeconds();
+        stage.setTitle("ZorkProject - Οι περιπετειες του Αιαντα");
+//        Time time = new Time();
+//        time.getAgeInSeconds();
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -39,5 +44,6 @@ public class ZorkProject extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
+
 }

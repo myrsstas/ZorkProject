@@ -1,17 +1,27 @@
 package zorkproject.Classes;
 
 public class Player {
-    String name;
-    int moves;
-    int score;
-    int health;
-    int position;
-    
-    Player(String N)
-    {
-      name=N;  
+    private String name = "Player1"; // TODO Ππεπει να κανουμε την αριθμηση του παιχτη σωστα με εναν μετρητη
+    private int moves;
+    private int score;
+    private int health;
+    private int position;
+
+    Player (){
+        moves = 0;
+        score = 0;
+        health = 100;
+        position =0;
     }
-    
+    Player(String n)
+    {
+        name =n;
+        moves = 0;
+        score = 0;
+        health = 100;
+        position =0;
+    }
+
     Player(int m , int s , int h, int p )
     {
       moves = m;

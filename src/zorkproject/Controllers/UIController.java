@@ -7,43 +7,61 @@ package zorkproject.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.sun.deploy.uitoolkit.impl.fx.ui.FXMessageDialog;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import zorkproject.Classes.Character;
+import zorkproject.Classes.Message;
+import zorkproject.Classes.Time;
+
+import javax.swing.*;
 
 /**
  *
  * @author paulkokos
  */
-public class UIController implements Initializable {
-
+public class UIController extends ActionEvent implements Initializable {
     public Button button;
-    public TextArea inputTextBox ;
-    public TextField outputTextField ;
-    @FXML
-    private Label label;
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+    public TextArea inputTextBox;
+    public TextField outputTextField;
+    private String caret = "->";
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-    private void handleButton(ActionEvent event) {
-
-    }
 
     public void handleButtonClick(ActionEvent actionEvent) {
-        inputTextBox.setText("sdgfsdfdfgdfgdfg");
+        try {
+            inputTextBox.setText(inputTextBox.getText() + caret + outputTextField.getText() + "\n");
+            outputTextField.clear();
+            //JOptionPane.showMessageDialog(null, "Message", "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Message", "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 
+
+    public void enterPressed(KeyEvent keyEvent) {
+        //new FXMessageDialog();
+
+    }
+
+
+    public void onEnter(ActionEvent actionEvent) {
+        //inputTextBox.setText(actionEvent.getSource().getClass().toString());
+        inputTextBox.setText(inputTextBox.getText() + caret + outputTextField.getText() + "\n");
+        outputTextField.clear();
+
+        //Time time = new Time();
+        //inputTextBox.setText(Integer.toString( time.getAgeInSeconds()));
+    }
 }

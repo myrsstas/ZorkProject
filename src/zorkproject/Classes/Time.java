@@ -3,9 +3,11 @@ package zorkproject.Classes;
 import java.util.Date;
 
 /**
- * Created by paulkokos on 29/3/2017.
+ * Η κλαση Time Χρησημοποιητε για να δινει και διχνει πληροφοριες κατα την διαρκεια του παιχνιδιου και στα παιχνιδια οταν
+ * σωζονται. Ετσι θα μπορει ο χρηστης να κανει ανακτηση οποιο save θελει και να συνεχισει απο το σημειο του.
  *
  */
+// TODO ΥΠΟ ΥΛΟΠΟΙΗΣΗ
 public class Time {
     private final Date createdDate = new java.util.Date();
 
