@@ -1,4 +1,4 @@
-package zorkproject.Classes.Game.Classes;
+package zorkproject.Classes.Game.Classes.Function;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,17 +12,36 @@ import java.util.logging.Logger;
  * αυτες ειναι μερικες απο τις λειτουργειες που χρησημοποιει η κλαση.
  *
  */
-public class Functions {
+public abstract class Functions {
+    private void newGame() {
+
+
+    }
+    private void saveGame() {
+
+    }
+    private void loadGame() {
+
+    }
+    private void exitGame() {
+
+    }
+
+
     // TODO New Game
     // TODO Save Game
+    // TODO Load Game
     // TODO Settings
     // TODO Settings->Player
     // TODO Settings-> Player -> Edit Player Settings
-    // TODO Settings ->Character
+    // TODO Settings ->Character -> add new Characters
     // TODO Settings ->Character ->Edit Character Settings
-    // TODO Settings -> Item
+    // TODO Settings -> Item - > add new Items
     // TODO Settings -> Item ->Edit Item Settings
+    // TODO Settings -> Messages -> Add new Messages
+    // TODO Settings ->  Messages -> Edit new Messages
 
+    // TODO Exit Game
 
     //TODO Παραδειγμα διαδικασιας Save
 
