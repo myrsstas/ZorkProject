@@ -1,5 +1,7 @@
 package zorkproject.Classes.Game.Classes;
 
+import com.sun.javafx.image.impl.ByteIndexed;
+
 /*
 * Κλαση Character: Χρησημοποιητε για να δημιουγουνται χαρακτηρες τυπου φαντασμα, μαγος
 * Η λογικη ειναι να μπορουμε να προσθετουμε , να αφαιρουμε η να επεξεργαζοματσε αντικειμενα χαρακτηρων οπου θα μπορουμε
@@ -15,7 +17,7 @@ public class Character
     private int health;
     private int position;
 
-    
+    //Constructors
     Character () 
     {
         name = "Player1";
@@ -25,42 +27,22 @@ public class Character
     }
     
     
-    Character(String N)
+    Character(String n)
     {
-        name = N;
+        name = n;
         
     }
     
-    Character(int s , int h , int p)
+    Character(String n, int s , int h , int p)
     {
+        name = n;
         score = s;
         health = h;
         position = p;
         
     }
-    
-    void PrintNameCharacter()
-     {
-      System.out.print(name);
-     }
-     
-     
-     
-     void PrintScoreCharacter()
-     {
-      System.out.print(score);
-     }
-     
-     void PrintHelthCaracter()
-     {
-      System.out.print(health);
-     }
-     
-     void PrintPositionCharacter()
-     {
-      System.out.print(position);
-     }
-     
+    //Getters and setters
+    //Name
      public void setNameCharacter(String name)
      {
          this.name = name;
@@ -71,9 +53,7 @@ public class Character
        return (name);
        
      }
-     
-     
-     
+     //Score
      public void setScoreCharacter(int score)
      {
          this.score = score;
@@ -82,8 +62,8 @@ public class Character
      {
        return (score);  
      }
-     
-     public void setHelthCharacter(int health)
+     //Health
+     public void setHealthCharacter(int health)
      {
        this.health = health;    
      }
@@ -93,7 +73,7 @@ public class Character
          return (health);
          
      }
-     
+     //Position
      public void setPositionCharacter(int position)
      {
          this.position = position;

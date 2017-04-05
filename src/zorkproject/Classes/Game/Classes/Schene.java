@@ -3,9 +3,10 @@ package zorkproject.Classes.Game.Classes;
 
 
 
-class Schene  {
+public class Schene  {
     private Item[] item;
     private Character character;
+
     Schene() {
 
     }

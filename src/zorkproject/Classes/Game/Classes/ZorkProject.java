@@ -11,24 +11,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author paulkokos
- */
+import java.util.Random;
+
 
 public class ZorkProject extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("UI/UI.fxml"));
-        stage.setTitle("ZorkProject - Οι περιπετειες του Αιαντα");
-//        Time time = new Time();
-//        time.getAgeInSeconds();
-
+        Parent root = FXMLLoader.load(getClass().getResource("../UI/UI.fxml"));
+        stage.setTitle("ZorkProject Αμφιπολις 150 μ.χ. - Οι περιπετειες του μικρου Αιαντα");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
     /**

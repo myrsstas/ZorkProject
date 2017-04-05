@@ -1,14 +1,32 @@
 package zorkproject.Classes.Game.Classes;
 
+import java.util.ArrayList;
+
 public class Player {
-    private String name = "Player1"; // TODO Ππεπει να κανουμε την αριθμηση του παιχτη σωστα με εναν μετρητη
+    private String name = "Player1";
+    private Character character;
+    private ArrayList<Inventory> inventory = new ArrayList<>();
+    private Schene currentScene;
+    private int position;
     private int moves;
     private int score;
     private int health;
-    private int position;
-    private Inventory inventory;
-
-    Player (){
+    private int attack;
+    //Constructors
+    Player(String n,Character ch,ArrayList<Inventory> in, Schene sh,int p, int m,int health, int attk) {
+        name = n;
+        character = ch;
+        inventory = in;
+        currentScene = sh;
+        position = p;
+        moves = m;
+        this.health = health;
+        attack = attk;
+    }
+    public Player(){
+        String name = "Player1";
+        Character character;
+        ArrayList<Inventory> inventory = new ArrayList<>();
         moves = 0;
         score = 0;
         health = 100;
@@ -31,31 +49,16 @@ public class Player {
       position = p;
       
     }
-     void PrintNamePlayer()
-     {
-      System.out.print(name);
-     }
-     
-     void PrintMovesPlayer()
-     {
-      System.out.print(moves);
-     }
-     
-     void PrintScorePlayer()
-     {
-      System.out.print(score);
-     }
-     
-     void PrintHealthPlayer()
-     {
-      System.out.print(health);
-     }
-     
-     void PrintPositionPlayer()
-     {
-      System.out.print(position);
-     }
-     
+    // Getters and Setters
+    //Character
+    public  Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character ch) {
+        this.character = ch;
+    }
+    //Name
      public void setNamePlayer(String name)
      {
          this.name = name;
@@ -66,7 +69,7 @@ public class Player {
        return (name);
        
      }
-     
+     //Moves
      public void setMovesPlayer(int moves)
      {
           this.moves = moves;
@@ -76,7 +79,7 @@ public class Player {
      {
        return (moves);  
      }
-     
+     //Score
      public void setScorePlayer(int score)
      {
          this.score = score;
@@ -85,7 +88,7 @@ public class Player {
      {
        return (score);  
      }
-     
+     //Health
      public void setHealthPlayer(int health)
      {
        this.health = health;    
@@ -96,15 +99,51 @@ public class Player {
          return (health);
          
      }
-     
+     //Position
      public void setPositionPlayer(int position)
      {
          this.position = position;
-         
+
      }
      
      public int getPositionPlayer()
      {
          return (position);
-     }     
+     }
+    //Attack
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+    //Inventory
+    public ArrayList<Inventory> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Inventory> inventory) {
+        this.inventory = inventory;
+    }
+    //Schene
+    public Schene getCurrentScene() {
+        return currentScene;
+    }
+
+    public void setCurrentScene(Schene currentScene) {
+        this.currentScene = currentScene;
+    }
+    @Override
+    public String toString() {
+        return (this.getNamePlayer()+ " "+"\n"+
+                this.getCharacter() + " "+"\n"+
+                this.getInventory() +" "+"\n"+
+                this.getCurrentScene()+" "+"\n"+
+                this.getPositionPlayer() +" "+"\n"+
+                this.getMovesPlayer() +" "+"\n"+
+                this.getScorePlayer() +" "+"\n"+
+                this.getHealthPlayer() +" "+"\n"+
+                this.getAttack() +" "+"\n");
+    }
 }
