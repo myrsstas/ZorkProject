@@ -5,10 +5,9 @@
  */
 package zorkproject.Classes.Game.Controller;
 
+import java.awt.event.ActionListener;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -16,10 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import zorkproject.Classes.Game.Classes.Command;
-import zorkproject.Classes.Game.Classes.Item;
-import zorkproject.Classes.Game.Classes.Message;
-import zorkproject.Classes.Game.Classes.Player;
+import zorkproject.Classes.Game.Classes.*;
 
 import javax.swing.*;
 import javax.swing.text.Caret;
@@ -28,12 +24,13 @@ import javax.swing.text.DefaultCaret;
 import static javax.swing.text.DefaultCaret.ALWAYS_UPDATE;
 
 
-public class UIController extends ActionEvent implements Initializable {
+public class UIController  implements Initializable {
     public Button button;
     public TextArea outputTextBox;
     public TextField inputTextField;
     private String caret = "->";
-
+    private Command command = new Command();
+    Schene schene = new Schene();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,20 +53,27 @@ public class UIController extends ActionEvent implements Initializable {
 
     public void handleButtonClick(ActionEvent actionEvent) {
         try {
+            //Αναγνωριση εντολης "Exit"
+            if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "exit")) {
+                command.exit(1);
+            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "new game")) {
+
+            }
             outputTextBox.setText(outputTextBox.getText() + caret + inputTextField.getText() + "\n");
             inputTextField.clear();
-            TextArea.setCaretPosition(outputTextBox.getDocument().getLength());
-            outputTextBox.
+            //TODO Δεν κανει wrap down το caret. οταν περνας το οριο του TextArea
             //JOptionPane.showMessageDialog(null, "Message", "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
 //            if (actionEvent) {
 //
 //            }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Message", "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Message" + ex.getMessage(), "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
         }
     }
+
     public void onEnter(ActionEvent actionEvent) {
         //inputTextBox.setText(actionEvent.getSource().getClass().toString());
+
         outputTextBox.setText(outputTextBox.getText() + caret + inputTextField.getText() + "\n");
         inputTextField.clear();
 

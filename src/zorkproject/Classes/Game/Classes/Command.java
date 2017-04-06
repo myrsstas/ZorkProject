@@ -9,8 +9,7 @@ public class Command {
     private String commandName;
     private String commandDescription;
     public Command() {
-        commandName = "";
-        commandDescription  = "";
+
     }
     public Command(String n, String d) {
         commandName = n;
@@ -44,7 +43,8 @@ public class Command {
     * 7. load (under production)
     * 8. exit
     * */
-    public String exit() {
-        return "Exit";
+
+    public void exit(int stat) {
+        System.exit(stat);
     }
 }
