@@ -30,6 +30,7 @@ public class UIController  implements Initializable {
     public TextField inputTextField;
     private String caret = "->";
     private Command command = new Command();
+
     Schene schene = new Schene();
 
     @Override

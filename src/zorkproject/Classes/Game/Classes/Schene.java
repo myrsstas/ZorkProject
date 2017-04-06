@@ -2,19 +2,35 @@ package zorkproject.Classes.Game.Classes;
 
 
 import javax.management.Descriptor;
+import java.util.ArrayList;
 
 public class Schene  {
     private String name;
     private String description;
-    private Item[] item;
+    private ArrayList<Item> item;
     private Character character;
     private int scheneCode;
+    public Schene() {
+        this.name = "";
+        this.description = "";
+        this.item = new ArrayList<>();
+        this.character = null;
+        this.scheneCode = 0;
+    }
     public Schene(String name,String desr, int code) {
         this.name = name;
         this.description = desr;
         this.scheneCode = code;
-        item  = new Item[] {};
+        item  = new ArrayList<>();
         character = null;
+    }
+    public Schene(String name,String desr, int code,Item item,Character ch) {
+        this.name = name;
+        this.description = desr;
+        this.scheneCode = code;
+        this.item  = new ArrayList<>();
+        this.item.add(item);
+        this.character = ch;
     }
 
 
@@ -34,13 +50,7 @@ public class Schene  {
         this.description = description;
     }
 
-    public Item[] getItem() {
-        return item;
-    }
 
-    public void setItem(Item[] item) {
-        this.item = item;
-    }
 
     public Character getCharacter() {
         return character;
@@ -58,4 +68,11 @@ public class Schene  {
         this.scheneCode = scheneCode;
     }
 
+    public ArrayList<Item> getItem() {
+        return item;
+    }
+
+    public void setItem(ArrayList<Item> item) {
+        this.item = item;
+    }
 }
