@@ -6,6 +6,7 @@
 package zorkproject.Classes.Game.Controller;
 
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.*;
 
@@ -32,6 +33,7 @@ public class UIController  implements Initializable {
     private Command command = new Command();
 
     Schene schene = new Schene();
+    Player player = new Player();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -44,6 +46,7 @@ public class UIController  implements Initializable {
         listItems.add(new Item("Jewel","Ενα διαμαντι. Συνηθως ενσωματονονται με αλλα αντικειμενα",1,2));
         listItems.add(new Item("Crown of Justice","Κανενας δεν μπορει να κρυφτει απο αυτο το στεμα. Η δικαιοσυνη παντοτε θα θριαμβευει",1,2));
         outputTextBox.setText(listItems.toString());
+        outputTextBox.setText("Δωσε ονομα για να ξεκινησει το παιχνιδι");
 
         outputTextBox.setText(outputTextBox.getText() + "\n\n************************************************\n\n");
         outputTextBox.setText(outputTextBox.getText() + player.toString());
@@ -52,14 +55,29 @@ public class UIController  implements Initializable {
 
     }
 
-    public void handleButtonClick(ActionEvent actionEvent) {
+    public void onEnter(ActionEvent actionEvent) {
+        //inputTextBox.setText(actionEvent.getSource().getClass().toString());
         try {
             //Αναγνωριση εντολης "Exit"
-            if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "exit")) {
-                command.exit(1);
-            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "new game")) {
 
-            }
+            //TODO αντικατασταση με hashmap
+            //TODO hashmap με ρηματα
+            //TODO hashmap με ουσιαστικα
+//            if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "exit")) {
+//                command.exit(1);
+//            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "new game")) {
+//                //Κωδικας για εναρξ νεου παιχνιδιου
+//
+//
+//            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "Load game")) {
+//                // Κωδικας για φορτωση αποθηκευμενου παιχνιδιου
+//            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "Save Game")) {
+//                // Κωδικας για αποθηκευση παιχνιδιου
+//            } else if (Objects.equals(inputTextField.getText().trim().toLowerCase(), "Settings")) {
+//
+//            } else {
+//                outputTextBox.setText("Μη εγκυρη εντολη, παρακαλω δοκιμαστε ξανα !!");
+//            }
             outputTextBox.setText(outputTextBox.getText() + caret + inputTextField.getText() + "\n");
             inputTextField.clear();
             //TODO Δεν κανει wrap down το caret. οταν περνας το οριο του TextArea
@@ -68,20 +86,11 @@ public class UIController  implements Initializable {
 //
 //            }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Message" + ex.getMessage(), "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Message" + ex.getMessage(), "InfoBox: ", JOptionPane.INFORMATION_MESSAGE);
+
+
+            //Time time = new Time();
+            //inputTextBox.setText(Integer.toString( time.getAgeInSeconds()));
         }
-    }
-
-    public void onEnter(ActionEvent actionEvent) {
-        //inputTextBox.setText(actionEvent.getSource().getClass().toString());
-
-        outputTextBox.setText(outputTextBox.getText() + caret + inputTextField.getText() + "\n");
-        inputTextField.clear();
-
-
-
-
-        //Time time = new Time();
-        //inputTextBox.setText(Integer.toString( time.getAgeInSeconds()));
     }
 }
