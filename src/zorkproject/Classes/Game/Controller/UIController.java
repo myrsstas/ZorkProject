@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
 import java.net.URL;
 import java.util.*;
 
+import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -26,10 +28,11 @@ import static javax.swing.text.DefaultCaret.ALWAYS_UPDATE;
 
 public class UIController  implements Initializable {
     public Button button;
-    public TextArea outputTextBox;
+    @FXML public TextArea outputTextBox;
     public TextField inputTextField;
     private String caret = "->";
     private Command command = new Command();
+
 
     Schene schene = new Schene();
 
@@ -61,7 +64,9 @@ public class UIController  implements Initializable {
 
             }
             outputTextBox.setText(outputTextBox.getText() + caret + inputTextField.getText() + "\n");
+            outputTextBox.setWrapText(true);
             inputTextField.clear();
+            outputTextBox.setScrollTop(Double.MAX_VALUE);
             //TODO Δεν κανει wrap down το caret. οταν περνας το οριο του TextArea
             //JOptionPane.showMessageDialog(null, "Message", "InfoBox: " , JOptionPane.INFORMATION_MESSAGE);
 //            if (actionEvent) {

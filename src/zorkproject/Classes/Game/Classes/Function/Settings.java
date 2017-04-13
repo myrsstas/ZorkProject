@@ -15,6 +15,7 @@ package zorkproject.Classes.Game.Classes.Function;
 // TODO Exit Game
 
 public class Settings extends Functions {
+    private int z;
     public void settings() {
 
     }

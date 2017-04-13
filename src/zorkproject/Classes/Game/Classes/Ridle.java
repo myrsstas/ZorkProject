@@ -11,8 +11,8 @@ public class Ridle {
     private String ridleQuestion;
     private String ridleAnswer;
     private Ridle() {
-        ridleQuestion = "";
-        ridleAnswer = "";
+        ridleQuestion = "Μεγαλωνει και τεντωνει και ποτε δεν ξεχηλωνει . Τι ειναι ? ?";
+        ridleAnswer = "rubber";
     }
     Ridle(String question, String answer){
         ridleAnswer = answer;

@@ -12,6 +12,8 @@ import java.util.logging.Logger;
  * παραμετροποιηση. Προς το παρων, αυτες ειναι μερικες απο τις λειτουργειες που χρησημοποιει η κλαση.
  */
 public abstract class Functions {
+    private int a;
+    private int b;
     private void newGame() {
         //Οταν θα παταω την εντολη new game θα πρεπει να ξεκιναει το παιχνιδι.
 
