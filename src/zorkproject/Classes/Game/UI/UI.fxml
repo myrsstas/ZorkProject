@@ -24,5 +24,6 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
+
    </children>
 </AnchorPane>
