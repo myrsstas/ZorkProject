@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package zorkproject.Classes.Game.Classes;
+package zorkproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,18 +11,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.util.Random;
-
+/**
+ *
+ * @author paulkokos
+ */
 
 public class ZorkProject extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../UI/UI.fxml"));
-        stage.setTitle("ZorkProject Αμφιπολις 150 μ.χ. - Οι περιπετειες του μικρου Αιαντα");
+        Parent root = FXMLLoader.load(getClass().getResource("../zorkproject/Classes/Game/UI/UI.fxml"));
+        stage.setTitle("ZorkProject - Οι περιπετειες του Αιαντα");
+//        Time time = new Time();
+//        time.getAgeInSeconds();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
     }
 
     /**
