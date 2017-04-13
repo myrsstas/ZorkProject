@@ -32,7 +32,7 @@ public class Player {
         health = 100;
         position =0;
     }
-    Player(String n)
+    public Player(String n)
     {
         name =n;
         moves = 0;

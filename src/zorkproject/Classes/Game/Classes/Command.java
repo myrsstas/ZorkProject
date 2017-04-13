@@ -2,7 +2,7 @@ package zorkproject.Classes.Game.Classes;
 
 /**
  * Η κλαση Command ειναι διαχειρηζεται τισ εντολες ως αντικειμενα με μελλοντικο σκοπο αν τα αποθηκευει σε ενα αρχειο
- * κλασεων (μπορει και δυο) οπου θα ονομαζεται commands H verb και
+ * κλασεων ( δυο) οπου θα ονομαζεται commands H verb και
  *
  */
 public class Command {
