@@ -19,6 +19,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import zorkproject.Classes.Game.Classes.Character;
+import zorkproject.Classes.Game.Classes.Function.Functions;
 import zorkproject.Classes.Game.Classes.Message;
 import zorkproject.Classes.Game.Classes.Time;
 
@@ -32,6 +33,7 @@ public class UIController extends ActionEvent implements Initializable {
     public Button button;
     public TextArea inputTextBox;
     public TextField outputTextField;
+
     private String caret = "->";
 
     @Override

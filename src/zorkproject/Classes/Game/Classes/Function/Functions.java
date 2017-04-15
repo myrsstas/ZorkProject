@@ -11,9 +11,16 @@ import java.util.logging.Logger;
  * μια κλαση με διαφορες λειτουργειες οπου θα εχει προσβαση στις υπολοιπες κλασεις και θα κανει
  * παραμετροποιηση. Προς το παρων, αυτες ειναι μερικες απο τις λειτουργειες που χρησημοποιει η κλαση.
  */
-public abstract class Functions {
+public class Functions {
     private int a;
     private int b;
+    private enum Status {CONTINUE,STOP};
+    /*Το newgame ΔΗΜΙΟΥΡΓΕΙ ΕΝΑ ΝΕΟ ΠΑΙΧΝΙΔΙ. ΑΛΛΟ ΤΟ newgame και αλλο το STARTGAME.
+    *Προς το παρων μονο μπορουμε να κανουμε να τρεχει μεσω case για επιλογες και
+    * while για να τρεχει την εκαστωτε περιπτωση.
+    *
+    *
+    * */
     private void newGame() {
         //Οταν θα παταω την εντολη new game θα πρεπει να ξεκιναει το παιχνιδι.
 
@@ -45,6 +52,8 @@ public abstract class Functions {
     // TODO Exit Game
 
     //TODO Παραδειγμα διαδικασιας Save
+    //TODO Στο "SAVE GAME" θα πρεπει να ελεγχω τον φακελο , εαν υπαρχει, αν οχι να τον δημιουργει και να σωζει την κλαση
+    //
 
     //private CurrentLocation currentLocation;
 //    String fileName = "data.bin";

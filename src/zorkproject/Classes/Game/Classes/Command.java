@@ -2,9 +2,10 @@ package zorkproject.Classes.Game.Classes;
 
 /**
  * Η κλαση Command ειναι διαχειρηζεται τισ εντολες ως αντικειμενα με μελλοντικο σκοπο αν τα αποθηκευει σε ενα αρχειο
- * κλασεων ( δυο) οπου θα ονομαζεται commands H verb και
+ * κλασεων ( δυο) οπου θα ονομαζεται commands H verb (ρημα) και noun (ουσιαστικο)
  *
  */
+//TODO Ολες οι εντολες θα πρεπει να γινονται trim() και να ειναι lowercase().
 public class Command {
     private String commandName;
     private String commandDescription;
