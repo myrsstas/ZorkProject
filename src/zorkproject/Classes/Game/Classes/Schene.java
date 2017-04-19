@@ -10,6 +10,9 @@ public class Schene  {
     private ArrayList<Item> item;
     private Character character;
     private int scheneCode;
+    private Player schenePlayer1;        /** O παιχτης του παιχνιδιου.
+                                            * TODO ΠΡΟΣ ΤΟ ΠΑΡΩΝ ΓΙΝΕΤΑΙ ΜΕ ΕΝΑΝ ΠΑΙΧΤΗ
+                                            */
     public Schene() {
         this.name = "";
         this.description = "";

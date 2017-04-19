@@ -22,8 +22,6 @@ public class ZorkProject extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../zorkproject/Classes/Game/UI/UI.fxml"));
         stage.setTitle("ZorkProject - Οι περιπετειες του Αιαντα");
-//        Time time = new Time();
-//        time.getAgeInSeconds();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

@@ -11,6 +11,8 @@ package zorkproject.Classes.Game.Classes;
 *   *Φορτωση σεναριου απο αρχειο. (???)
  *  *Φορτωση
 * */
+import zorkproject.Classes.Game.Classes.Function.Functions;
+
 import java.util.HashMap;
 
 public class Game {
@@ -18,6 +20,12 @@ public class Game {
     Time gameTime;
     Command commandOfGame;
 
+
+    Game() {
+        Ridle ridle = new Ridle();
+        Schene schene = new Schene();
+        Item item = new Item();
+    }
     public void startGame(){
         Ridle ridle = new Ridle();
         Player player = new Player();

@@ -2,12 +2,34 @@
 <Diagram>
   <ID>JAVA</ID>
   <OriginalElement />
-  <nodes />
+  <nodes>
+    <node x="-68.0" y="-6.0">zorkproject.Classes.Command</node>
+    <node x="-68.0" y="-153.0">zorkproject.Classes.Game.Classes.Function.Functions</node>
+    <node x="-281.0" y="-106.0">zorkproject.Classes.Game.Classes.Item</node>
+    <node x="-175.0" y="90.0">zorkproject.Classes.Game.Classes.Time</node>
+    <node x="-281.0" y="41.0">zorkproject.Classes.Game.Classes.Ridle</node>
+    <node x="-281.0" y="-204.0">zorkproject.Classes.Game.Classes.Game</node>
+    <node x="-68.0" y="-55.0">zorkproject.Classes.Game.Classes.Character</node>
+    <node x="-281.0" y="-57.0">zorkproject.Classes.Game.Classes.Message</node>
+    <node x="-281.0" y="-155.0">zorkproject.Classes.Game.Classes.Inventory</node>
+    <node x="-281.0" y="90.0">zorkproject.Classes.Game.Classes.Schene</node>
+    <node x="-68.0" y="-104.0">zorkproject.Classes.Game.Classes.Function.Settings</node>
+    <node x="-81.0" y="90.0">zorkproject.Classes.Game.Controller.UIController</node>
+    <node x="-281.0" y="-8.0">zorkproject.Classes.Game.Classes.Player</node>
+  </nodes>
   <notes />
-  <edges />
+  <edges>
+    <edge source="zorkproject.Classes.Game.Classes.Function.Settings" target="zorkproject.Classes.Game.Classes.Function.Functions">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
   <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
-  <SelectedNodes />
+  <SelectedNodes>
+    <node>zorkproject.Classes.Game.Controller.UIController</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
 </Diagram>
 

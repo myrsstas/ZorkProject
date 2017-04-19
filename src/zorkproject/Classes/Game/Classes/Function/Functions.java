@@ -21,19 +21,22 @@ public class Functions {
     *
     *
     * */
-    private void newGame() {
+    public void newGame() {
         //Οταν θα παταω την εντολη new game θα πρεπει να ξεκιναει το παιχνιδι.
 
     }
-    private void saveGame() {
+    public void saveGame() {
 
     }
-    private void loadGame() {
+    public void loadGame() {
 
     }
-    private void exitGame() {
-
+    public void exitGame() {
+        System.exit(0);
     }
+     public String invalidCommand() {
+        return "\nΜη εγκυρη εντολη, παρακαλω δοκιμαστε ξανα !!\n";
+     }
 
 
     // TODO New Game
