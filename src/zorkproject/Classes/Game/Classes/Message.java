@@ -1,17 +1,36 @@
 package zorkproject.Classes.Game.Classes;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.security.PublicKey;
+import java.util.Formatter;
+import java.util.FormatterClosedException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 /**
  * Ειναι τα μυνηματα που θα δινει ως απαντηση στην διαδραστικοτητα του παιχνιδιου με τον παιχτη.
  */
 public class Message {
-    private String message = "";
+    //    private Formatter output;
+//    private Scanner input;
+//    private FileReader fileReader;
+//    private FileWriter fileWriter;
+    private String message;
     public Message (){
-        message = "";
+        setMessage("");
     }
     public Message(String m) {
-        message = m;
+        setMessage(m);
     }
-    private void welcomeMessage() {
+    public void setMessage(String m) {
+        message= m;
+    }
+    public String getMessage () {
+        return message;
+    }
+    public void welcomeMessage() {
         message = "Γεια σου και καλως ηρθες στο Zork text-based game μας !!\n"
                 + "Το παιχνιδι διαδραματιζεται στην Κεντρικη μακεδονια το ετος 150 μ.χ.\n"
                 + " με πρωταγωνιστη τον μικρο Αιαντα, οπου βρισκεται στο Καστρο της Αμφιπολης.\n"
@@ -41,7 +60,7 @@ public class Message {
     }
     //Σοφιτα
     private void eastRoomMessage() {
-        message = "Βρισκεσαι στην σοφιτα. Το πατωμα τριζει και εχει μονο ενα κουτι.";
+        message = "Βρισκεσαι στην σοφιτα. Το πατωμα τριζει και εχει μονο ενα κουτι (box).";
     }
     // Αποθηκη
     private void westRoomMessage() {
@@ -50,12 +69,91 @@ public class Message {
     }
     public String getWelcomeMessage() {
         welcomeMessage();
-        return message;
+        return getMessage();
     }
-    public void setMessage(String m) {
-        message= m;
+    public String getCentralRoomMessage() {
+        centralRoomMessage();
+        return getMessage();
     }
-    public String getMessage () {
-        return message;
+    public String getNorthRoomMessage() {
+        northRoomMessage();
+        return getMessage();
     }
+    public String getSouthRoomMessage() {
+        southRoomMessage();
+        return getMessage();
+    }
+    public String getEastRoomMessage() {
+        eastRoomMessage();
+        return getMessage();
+    }
+    public String getWestRoomMessage() {
+        westRoomMessage();
+        return getMessage();
+    }
+     //TODO ΠΡΟΣΩΡΙΝΗ ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ ΛΟΓΩ ΜΗ ΛΕΙΤΟΥΡΓΙΑΣ (ΛΑΝΘΑΣΜΕΝΗΣ)
+//    public void openFileWrite() {
+//        try {
+//            fileReader = new FileReader("messages.txt");
+//        } catch (SecurityException securityException) {
+//            System.err.println("Δεν εχετε δικαιωματα εγγραφης σε αυτο το αρχειο");
+//            System.exit(1);
+//        } catch (FileNotFoundException fileNotFoundException) {
+//            System.err.println("Σφαλμα δημιουργιας η προσβασης στο αρχειο");
+//            System.exit(1);
+//        }
+//    }
+//    public void openFileRead() {
+//        try {
+//            input = new Scanner("messages.txt");
+//            File file = new File("messages.txt");
+//            //System.out.print(file.getAbsolutePath());
+//        } catch (SecurityException securityException) {
+//            System.err.println("Δεν εχετε δικαιωματα προσβασης στο αρχειο !");
+//            System.exit(1);
+//        }
+//    }
+//    public void readRecords() {
+//
+//        System.out.printf("%-10s","Message");
+//        try {
+//
+//
+//            while (input.hasNext()) {
+//                message.setMessage(input.next());
+//                System.out.printf("%s\n",(String) message.getMessage());
+//            }
+//        } catch (NoSuchElementException elementException) {
+//            System.err.printf("File improperly formed");
+//            input.close();
+//            System.exit(1);
+//        }
+//    }
+//    public void writeRecords() {
+//        Message message = new Message();
+//        Scanner input = new Scanner(System.in);
+//        while (input.hasNext()) {
+//            try {
+//                message.setMessage(input.next());
+//            } catch (FormatterClosedException formatterClosedException) {
+//                System.err.println("Error writting to file");
+//                return;
+//            }
+//            catch (NoSuchElementException noSuchElementSelection) {
+//                System.err.println("Invalid input please try again.");
+//                input.nextLine();
+//            }
+//        }
+//    }
+//    public void closeFileRead() {
+//        if (input != null) {
+//            input.close();
+//        }
+//    }
+//    public void closeFileWrite() {
+//        if (output!=null) {
+//            output.close();
+//        }
+//    }
+
 }

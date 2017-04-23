@@ -1,5 +1,7 @@
 package zorkproject.Classes.Game.Classes.Function;
 
+import zorkproject.Classes.Game.Classes.Game;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -12,8 +14,17 @@ import java.util.logging.Logger;
  * παραμετροποιηση. Προς το παρων, αυτες ειναι μερικες απο τις λειτουργειες που χρησημοποιει η κλαση.
  */
 public class Functions {
-    private int a;
-    private int b;
+//    private int a;
+//    private int b;
+
+    public Functions() {
+
+    }
+
+    public Functions(int a, int b) {
+//        this.a = a;
+//        this.b = b;
+    }
     private enum Status {CONTINUE,STOP};
     /*Το newgame ΔΗΜΙΟΥΡΓΕΙ ΕΝΑ ΝΕΟ ΠΑΙΧΝΙΔΙ. ΑΛΛΟ ΤΟ newgame και αλλο το STARTGAME.
     *Προς το παρων μονο μπορουμε να κανουμε να τρεχει μεσω case για επιλογες και
@@ -23,6 +34,8 @@ public class Functions {
     * */
     public void newGame() {
         //Οταν θα παταω την εντολη new game θα πρεπει να ξεκιναει το παιχνιδι.
+        Game game = new Game();
+        System.out.printf("You started new game");
 
     }
     public void saveGame() {
@@ -37,6 +50,8 @@ public class Functions {
      public String invalidCommand() {
         return "\nΜη εγκυρη εντολη, παρακαλω δοκιμαστε ξανα !!\n";
      }
+
+
 
 
     // TODO New Game
@@ -74,4 +89,8 @@ public class Functions {
 //        }
 //        System.out.print("DONE SAVING TO FILE!\n");
 //    }
+//    public String toString() {
+//        return Integer.toString( this.a) + Integer.toString(this.b);
+//    }
+
 }

@@ -16,6 +16,13 @@ package zorkproject.Classes.Game.Classes.Function;
 
 public class Settings extends Functions {
     private int z;
+
+    public Settings(int z) {
+        //TODO NA TO DIORTHOSO DEN EINAI SOSTO
+        super(10,20);
+        this.z = z;
+    }
+
     public void settings() {
 
     }

@@ -83,5 +83,14 @@ public class Character
      public int getPositionCharacter()
      {
          return (position);
-     }     
+     }
+     //Επιστρεφει τις μεταβλητες του αντικειμενου
+     public String toString() {
+         name = "Player1";
+         score = 0;
+         health = 100;
+         position = 0;
+       return "\nName: " + getNameCharacter() + "\nScore:" + getScorePlayer() + "\nHealth: " + getHealthCharacter() +
+               "\nPosition: " + getPositionCharacter();
+     }
 }

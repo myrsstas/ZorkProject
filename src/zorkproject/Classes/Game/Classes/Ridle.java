@@ -10,7 +10,7 @@ package zorkproject.Classes.Game.Classes;
 public class Ridle {
     private String ridleQuestion;
     private String ridleAnswer;
-    protected Ridle() {
+    Ridle() {
         ridleQuestion = "Μεγαλωνει και τεντωνει και ποτε δεν ξεχηλωνει . Τι ειναι ? ?";
         ridleAnswer = "rubber";
     }
@@ -21,10 +21,12 @@ public class Ridle {
     public String getRidleQuestion() {
         return ridleQuestion;
     }
+    public void setRidleQuestion(String question) {this.ridleQuestion = question;}
 
     public String getRidleAnswer() {
         return ridleAnswer;
     }
+    public void setRidleAnswer(String answer) {this.ridleAnswer = answer;}
     public Ridle getRidle () {
         Ridle temp = new Ridle();
         temp.ridleQuestion = ridleQuestion;

@@ -3,6 +3,7 @@ package zorkproject.Classes.Game.Classes;
 
 import javax.management.Descriptor;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Schene  {
     private String name;

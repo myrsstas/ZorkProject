@@ -7,7 +7,7 @@ public class Item {
     private int position;
     private Boolean pickable; // TODO Πρεπει να το ενσωματωσουμε στο υπολοιπο προγραμμα
 
-    Item() {
+    public Item() {
         name = "";
         description = "";
         code = 0;
@@ -89,20 +89,20 @@ public class Item {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return (this.getNameItem() + " " +
-                this.getDescription() + " " +
-                this.getCodeItem() + " " +
-                this.getPositionItem() + "\n");
-    }
-
     public Boolean getPickable() {
         return pickable;
     }
 
     public void setPickable(Boolean pickable) {
         this.pickable = pickable;
+    }
+
+    @Override
+    public String toString() {
+        return (this.getNameItem() + " " +
+                this.getDescription() + " " +
+                this.getCodeItem() + " " +
+                this.getPositionItem() + "\n");
     }
 }
 

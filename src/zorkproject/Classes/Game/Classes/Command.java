@@ -43,13 +43,18 @@ import java.lang.reflect.GenericSignatureFormatError;
 public class Command {
     private String commandName;
     private String commandDescription;
+    private int numberOfParameters;
+
     public Command() {
 
     }
-    public Command(String n, String d) {
-        commandName = n;
-        commandDescription = d;
+
+    public Command(String name, String description,int parameters) {
+        setCommandName(name);
+        setCommandDescription(description);
+        setNumberOfParameters(parameters);
     }
+
     //Getters and Setters Command
     //commandName
     public String getCommandName() {
@@ -59,6 +64,7 @@ public class Command {
     public void setCommandName(String commandName) {
         this.commandName = commandName;
     }
+
     //commandDescription
     public String getCommandDescription() {
         return commandDescription;
@@ -66,6 +72,14 @@ public class Command {
 
     public void setCommandDescription(String commandDescription) {
         this.commandDescription = commandDescription;
+    }
+
+    public int getNumberOfParameters() {
+        return numberOfParameters;
+    }
+
+    public void setNumberOfParameters(int numberOfParameters) {
+        this.numberOfParameters = numberOfParameters;
     }
     /*
     * COMMAND LIST
@@ -82,4 +96,8 @@ public class Command {
     public void exit(int stat) {
         System.exit(stat);
     }
+    public  String toString() {
+        return getCommandName() + getCommandDescription() + getNumberOfParameters();
+    }
 }
+

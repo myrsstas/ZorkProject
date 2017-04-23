@@ -1,5 +1,6 @@
 package zorkproject.Classes.Game.Classes;
 
+
 import java.util.Date;
 
 /**
@@ -10,10 +11,19 @@ import java.util.Date;
 // TODO ΥΠΟ ΥΛΟΠΟΙΗΣΗ
 public class Time {
     private final Date createdDate = new java.util.Date();
-
+    //ΕΠΙΣΤΡΕΦΕΙ ΤΟΝ ΧΡΟΝΟ ΣΕ ΔΕΥΤΕΡΟΛΕΠΤΑ ΑΠΟ ΤΗΝ ΕΝΑΡΞΗ ΤΟΥ ΠΑΙΧΝΙΔΙΟΥ
     public int getAgeInSeconds() {
-        java.util.Date now = new java.util.Date();
-        return (int) ((now.getTime() - this.createdDate.getTime()) / 1000);
+        try {
+            java.util.Date now = new java.util.Date();
+            return (int) ((now.getTime() - this.createdDate.getTime()) / 1000);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return 1;
+        }
+    }
+    ///ΕΠΙΣΤΡΕΦΕΙ ΟΛΕΣ ΤΙΣ ΤΙΜΕΣ ΤΗΣ ΚΛΑΣΗΣ
+    public String toString() {
+        return Integer.toString(getAgeInSeconds());
     }
 
 }
