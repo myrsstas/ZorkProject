@@ -11,9 +11,9 @@ public class Schene  {
     private ArrayList<Item> item;
     private Character character;
     private int scheneCode;
-    private Player schenePlayer1;        /** O παιχτης του παιχνιδιου.
-                                            * TODO ΠΡΟΣ ΤΟ ΠΑΡΩΝ ΓΙΝΕΤΑΙ ΜΕ ΕΝΑΝ ΠΑΙΧΤΗ
-                                            */
+    private Player schenePlayer1;/** O παιχτης του παιχνιδιου.* TODO ΠΡΟΣ ΤΟ ΠΑΡΩΝ ΓΙΝΕΤΑΙ ΜΕ ΕΝΑΝ ΠΑΙΧΤΗ*/
+    private Schene nextSchene;  //Η ΕΠΟΜΕΝΗ ΣΚΗΝΗ (ΔΩΜΑΤΙΟ). ΘΑ ΓΙΝΕΤΑΙ ΜΕ ΓΡΑΦΟΥΣ
+
     public Schene() {
         this.name = "";
         this.description = "";
@@ -28,13 +28,13 @@ public class Schene  {
         item  = new ArrayList<>();
         character = null;
     }
-    public Schene(String name,String desr, int code,Item item,Character ch) {
+    public Schene(String name,String desr, int code,Item item,Character character) {
         this.name = name;
         this.description = desr;
         this.scheneCode = code;
         this.item  = new ArrayList<>();
         this.item.add(item);
-        this.character = ch;
+        this.character = character;
     }
 
 
@@ -78,5 +78,13 @@ public class Schene  {
 
     public void setItem(ArrayList<Item> item) {
         this.item = item;
+    }
+
+    public Schene getNextSchene() {
+        return nextSchene;
+    }
+
+    public void setNextSchene(Schene nextSchene) {
+        this.nextSchene = nextSchene;
     }
 }
